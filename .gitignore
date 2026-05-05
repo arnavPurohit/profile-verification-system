@@ -12,3 +12,4 @@ verifier/dist/
 .pytest_cache/
 accounts.json
 .DS_Store
+.claude/
