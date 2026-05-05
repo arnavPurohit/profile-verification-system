@@ -50,7 +50,7 @@ Client (curl / API consumer)
 
 ```bash
 git clone <repo>
-cd "Verification System"
+cd "profile-verification-system"
 cp .env.example .env
 ```
 
@@ -295,7 +295,7 @@ The fetcher rotates accounts automatically, tracking health, request counts, and
 ## Project Layout
 
 ```
-Verification System/
+profile-verification-system/
 ├── fetcher/               # Python / FastAPI scraper
 │   ├── app/
 │   │   ├── fetchers/      # login.py (Playwright), voyager.py, headless.py
