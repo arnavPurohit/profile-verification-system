@@ -1,0 +1,27 @@
+{
+  "urn": "urn:li:fsd_profile:priya-fb-002",
+  "public_id": "priya-facebook",
+  "url": "https://www.linkedin.com/in/priya-facebook",
+  "name": "Priya Iyer",
+  "headline": "Product Manager — Facebook (Meta)",
+  "location": "London, United Kingdom",
+  "experience": [
+    {
+      "company_urn": "urn:li:fsd_company:10667",
+      "company_name": "Facebook",
+      "title": "Senior Product Manager",
+      "start": "2019-08",
+      "end": null,
+      "is_current": true,
+      "employment_type": "full_time",
+      "location": "London"
+    }
+  ],
+  "education": [
+    { "school": "University of Cambridge", "degree": "MEng", "start": "2014", "end": "2018" }
+  ],
+  "profile_last_updated": "2026-03-22T00:00:00+00:00",
+  "fetched_at": "2026-05-04T12:00:00+00:00",
+  "source": "fixture",
+  "parser_version": "1.0.0"
+}

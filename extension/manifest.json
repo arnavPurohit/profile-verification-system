@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Verification System – LinkedIn Capture",
+  "description": "Captures Voyager XHR responses from authenticated LinkedIn sessions and ships them to the verification backend. Zero extra requests to LinkedIn.",
+  "version": "0.1.0",
+  "permissions": [
+    "webRequest",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.linkedin.com/*",
+    "http://localhost/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["*://*.linkedin.com/*"],
+      "js": ["relay.js"],
+      "run_at": "document_start",
+      "world": "ISOLATED"
+    }
+  ],
+  "options_page": "options.html"
+}

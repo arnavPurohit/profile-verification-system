@@ -1,0 +1,11 @@
+### 07 — Not at the company. Jane works at Coinbase; query is Stripe.
+### no_matching_role fires; freshness positive cancels a bit but score lands low.
+### Expected: verdict=no.
+
+POST http://localhost:8000/verify
+content-type: application/json
+
+{
+  "url": "https://www.linkedin.com/in/jane-other",
+  "company": "Stripe"
+}

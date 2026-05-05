@@ -1,0 +1,21 @@
+### 09 — Messy URL forms. The verifier normalizes all of these to the same
+### canonical URL. Each request resolves to the same fixture and produces
+### the same verdict.
+
+### bare slug, no protocol, country subdomain
+POST http://localhost:8000/verify
+content-type: application/json
+
+{ "url": "uk.linkedin.com/in/john-meta/", "company": "Meta" }
+
+### tracking params + uppercase
+POST http://localhost:8000/verify
+content-type: application/json
+
+{ "url": "https://www.linkedin.com/in/JOHN-META?utm_source=outreach&trk=public", "company": "Meta" }
+
+### pub/ legacy form (not in fixtures, expected: 502 unless you add a fixture)
+POST http://localhost:8000/verify
+content-type: application/json
+
+{ "url": "https://www.linkedin.com/pub/john-smith/1/abc/def", "company": "Meta" }

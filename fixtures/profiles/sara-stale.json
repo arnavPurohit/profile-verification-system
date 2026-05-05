@@ -1,0 +1,27 @@
+{
+  "urn": "urn:li:fsd_profile:sara-stale-004",
+  "public_id": "sara-stale",
+  "url": "https://www.linkedin.com/in/sara-stale",
+  "name": "Sara Müller",
+  "headline": "Software Engineer at Google",
+  "location": "Zürich, Switzerland",
+  "experience": [
+    {
+      "company_urn": "urn:li:fsd_company:1441",
+      "company_name": "Google",
+      "title": "Software Engineer",
+      "start": "2018-09",
+      "end": null,
+      "is_current": true,
+      "employment_type": "full_time",
+      "location": "Zürich"
+    }
+  ],
+  "education": [
+    { "school": "ETH Zürich", "degree": "MSc CS", "start": "2014", "end": "2018" }
+  ],
+  "profile_last_updated": "2021-03-15T00:00:00+00:00",
+  "fetched_at": "2026-05-04T12:00:00+00:00",
+  "source": "fixture",
+  "parser_version": "1.0.0"
+}

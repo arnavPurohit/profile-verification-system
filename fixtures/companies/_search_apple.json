@@ -1,0 +1,30 @@
+[
+  {
+    "urn": "urn:li:fsd_company:162479",
+    "name": "Apple",
+    "normalized": "apple",
+    "aliases": ["Apple Inc."],
+    "website": "https://apple.com",
+    "industry": "Consumer Electronics",
+    "size_band": "10001+",
+    "hq": "Cupertino, CA",
+    "parent_urn": null,
+    "fetched_at": "2026-05-04T12:00:00+00:00",
+    "source": "fixture",
+    "parser_version": "1.0.0"
+  },
+  {
+    "urn": "urn:li:fsd_company:8005551",
+    "name": "Apple Bank for Savings",
+    "normalized": "apple bank for savings",
+    "aliases": ["Apple Bank"],
+    "website": "https://applebank.com",
+    "industry": "Banking",
+    "size_band": "501-1000",
+    "hq": "New York, NY",
+    "parent_urn": null,
+    "fetched_at": "2026-05-04T12:00:00+00:00",
+    "source": "fixture",
+    "parser_version": "1.0.0"
+  }
+]

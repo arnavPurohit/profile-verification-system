@@ -1,0 +1,79 @@
+services:
+  mongo:
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      retries: 10
+
+  fetcher:
+    build: ./fetcher
+    ports:
+      - "8001:8001"
+    shm_size: '2gb'
+    environment:
+      MONGO_URL: mongodb://mongo:27017
+      MONGO_DB: verification
+      REDIS_URL: redis://redis:6379/0
+      FETCHER_PORT: "8001"
+      FETCHER_MODE: ${FETCHER_MODE:-fixture}
+      FIXTURES_DIR: /fixtures
+      LINKEDIN_LI_AT: ${LINKEDIN_LI_AT:-}
+      LINKEDIN_JSESSIONID: ${LINKEDIN_JSESSIONID:-}
+      LINKEDIN_BCOOKIE: ${LINKEDIN_BCOOKIE:-}
+      LINKEDIN_LIDC: ${LINKEDIN_LIDC:-}
+      LINKEDIN_DAILY_CAP: ${LINKEDIN_DAILY_CAP:-80}
+      PROFILE_HARD_TTL_DAYS: ${PROFILE_HARD_TTL_DAYS:-90}
+      COMPANY_HARD_TTL_DAYS: ${COMPANY_HARD_TTL_DAYS:-365}
+      ACCOUNTS_FILE: ${ACCOUNTS_FILE:-/srv/accounts.json}
+      RATE_LIMIT_RPM: ${RATE_LIMIT_RPM:-120}
+      WORKERS: ${FETCHER_WORKERS:-1}
+    volumes:
+      - ./fixtures:/fixtures:ro
+      - ./headless-debug:/tmp/headless-debug
+      - ./accounts.json:/srv/accounts.json:ro
+    depends_on:
+      mongo:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  verifier:
+    build: ./verifier
+    ports:
+      - "8000:8000"
+    environment:
+      MONGO_URL: mongodb://mongo:27017
+      MONGO_DB: verification
+      REDIS_URL: redis://redis:6379/0
+      VERIFIER_PORT: "8000"
+      FETCHER_URL: http://fetcher:8001
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-haiku-4-5-20251001}
+      PROFILE_FRESH_DAYS: ${PROFILE_FRESH_DAYS:-14}
+      COMPANY_FRESH_DAYS: ${COMPANY_FRESH_DAYS:-60}
+      RATE_LIMIT_RPM: ${RATE_LIMIT_RPM:-120}
+      WORKER_CONCURRENCY: ${VERIFIER_CONCURRENCY:-5}
+    depends_on:
+      - fetcher
+      - redis
+
+volumes:
+  mongo_data:
+  redis_data:

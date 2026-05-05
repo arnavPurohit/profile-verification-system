@@ -1,0 +1,10 @@
+### 01 — Happy path. Current Meta employee, exact URN match, fresh profile.
+### Expected: verdict=yes, confidence ~85.
+
+POST http://localhost:8000/verify
+content-type: application/json
+
+{
+  "url": "https://www.linkedin.com/in/john-meta",
+  "company": "Meta"
+}

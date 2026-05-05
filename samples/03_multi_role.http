@@ -1,0 +1,11 @@
+### 03 — Multiple current roles. Carlos is full-time at Stripe AND advisor elsewhere.
+### Multi-role penalty fires; Stripe match still wins.
+### Expected: verdict=yes, evidence shows multiple_current_roles -10.
+
+POST http://localhost:8000/verify
+content-type: application/json
+
+{
+  "url": "https://www.linkedin.com/in/carlos-multi",
+  "company": "Stripe"
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "urn": "urn:li:fsd_company:10667",
+    "name": "Meta",
+    "normalized": "meta",
+    "aliases": ["Facebook", "Meta Platforms"],
+    "website": "https://meta.com",
+    "industry": "Internet",
+    "size_band": "10001+",
+    "hq": "Menlo Park, CA",
+    "parent_urn": null,
+    "fetched_at": "2026-05-04T12:00:00+00:00",
+    "source": "fixture",
+    "parser_version": "1.0.0"
+  }
+]

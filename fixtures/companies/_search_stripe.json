@@ -1,0 +1,16 @@
+[
+  {
+    "urn": "urn:li:fsd_company:2135371",
+    "name": "Stripe",
+    "normalized": "stripe",
+    "aliases": [],
+    "website": "https://stripe.com",
+    "industry": "Financial Services",
+    "size_band": "5001-10000",
+    "hq": "South San Francisco, CA",
+    "parent_urn": null,
+    "fetched_at": "2026-05-04T12:00:00+00:00",
+    "source": "fixture",
+    "parser_version": "1.0.0"
+  }
+]

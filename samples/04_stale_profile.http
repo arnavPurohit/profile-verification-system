@@ -1,0 +1,12 @@
+### 04 — Stale profile. Last edited in 2021 but says "current" Google role.
+### Freshness penalty -10 fires; verdict still likely "yes" but with explicit
+### staleness in the evidence list, signaling to the customer to discount.
+### Expected: verdict=yes (lower confidence) or uncertain.
+
+POST http://localhost:8000/verify
+content-type: application/json
+
+{
+  "url": "https://www.linkedin.com/in/sara-stale",
+  "company": "Google"
+}

@@ -1,0 +1,25 @@
+{
+  "urn": "urn:li:fsd_profile:tara-apple-008",
+  "public_id": "tara-apple",
+  "url": "https://www.linkedin.com/in/tara-apple",
+  "name": "Tara Nakamura",
+  "headline": "Senior iOS Engineer at Apple",
+  "location": "Cupertino, California, United States",
+  "experience": [
+    {
+      "company_urn": "urn:li:fsd_company:162479",
+      "company_name": "Apple",
+      "title": "Senior iOS Engineer",
+      "start": "2020-11",
+      "end": null,
+      "is_current": true,
+      "employment_type": "full_time",
+      "location": "Cupertino, CA"
+    }
+  ],
+  "education": [],
+  "profile_last_updated": "2026-04-20T00:00:00+00:00",
+  "fetched_at": "2026-05-04T12:00:00+00:00",
+  "source": "fixture",
+  "parser_version": "1.0.0"
+}

@@ -1,0 +1,14 @@
+{
+  "urn": "urn:li:fsd_company:162479",
+  "name": "Apple",
+  "normalized": "apple",
+  "aliases": ["Apple Inc."],
+  "website": "https://apple.com",
+  "industry": "Consumer Electronics",
+  "size_band": "10001+",
+  "hq": "Cupertino, CA",
+  "parent_urn": null,
+  "fetched_at": "2026-05-04T12:00:00+00:00",
+  "source": "fixture",
+  "parser_version": "1.0.0"
+}

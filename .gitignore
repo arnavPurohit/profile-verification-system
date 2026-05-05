@@ -1,0 +1,14 @@
+.env
+fetcher/.env
+fetcher/.linkedin-playwright-profile/
+node_modules/
+verifier/node_modules/
+fetcher/.venv/
+**/__pycache__/
+*.pyc
+*.pyc
+verifier/dist/
+*.egg-info/
+.pytest_cache/
+accounts.json
+.DS_Store

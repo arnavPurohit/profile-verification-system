@@ -1,0 +1,21 @@
+### 02 — Rebrand. Profile lists "Facebook" as employer; query is "Meta".
+### Aliases map kicks in: facebook → meta. URN match makes it definitive.
+### Expected: verdict=yes, evidence includes company_alias_hit.
+
+POST http://localhost:8000/verify
+content-type: application/json
+
+{
+  "url": "https://www.linkedin.com/in/priya-facebook",
+  "company": "Facebook"
+}
+
+### Same person, queried with the new name. Should produce identical verdict.
+
+POST http://localhost:8000/verify
+content-type: application/json
+
+{
+  "url": "https://www.linkedin.com/in/priya-facebook",
+  "company": "Meta"
+}

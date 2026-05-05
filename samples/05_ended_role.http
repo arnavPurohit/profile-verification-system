@@ -1,0 +1,13 @@
+### 05 — Ended role. Amir left Stripe 60 days ago.
+### no_matching_role does NOT fire (he was at Stripe), but ended_recent fires
+### as a small positive (+5) — recent enough that profile may be stale, not old enough
+### to be confidently negative.
+### Expected: verdict=uncertain or no.
+
+POST http://localhost:8000/verify
+content-type: application/json
+
+{
+  "url": "https://www.linkedin.com/in/amir-ended",
+  "company": "Stripe"
+}

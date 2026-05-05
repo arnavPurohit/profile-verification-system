@@ -1,0 +1,37 @@
+{
+  "urn": "urn:li:fsd_profile:john-meta-001",
+  "public_id": "john-meta",
+  "url": "https://www.linkedin.com/in/john-meta",
+  "name": "John Smith",
+  "headline": "Software Engineer at Meta",
+  "location": "Menlo Park, California, United States",
+  "experience": [
+    {
+      "company_urn": "urn:li:fsd_company:10667",
+      "company_name": "Meta",
+      "title": "Software Engineer",
+      "start": "2022-03",
+      "end": null,
+      "is_current": true,
+      "employment_type": "full_time",
+      "location": "Menlo Park, CA"
+    },
+    {
+      "company_urn": "urn:li:fsd_company:1441",
+      "company_name": "Google",
+      "title": "Software Engineering Intern",
+      "start": "2020-06",
+      "end": "2020-09",
+      "is_current": false,
+      "employment_type": "intern",
+      "location": "Mountain View, CA"
+    }
+  ],
+  "education": [
+    { "school": "Stanford University", "degree": "BS Computer Science", "start": "2018", "end": "2022" }
+  ],
+  "profile_last_updated": "2026-04-13T00:00:00+00:00",
+  "fetched_at": "2026-05-04T12:00:00+00:00",
+  "source": "fixture",
+  "parser_version": "1.0.0"
+}

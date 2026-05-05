@@ -1,0 +1,35 @@
+{
+  "urn": "urn:li:fsd_profile:leo-contractor-006",
+  "public_id": "leo-contractor",
+  "url": "https://www.linkedin.com/in/leo-contractor",
+  "name": "Leonor Costa",
+  "headline": "Independent Researcher · Consulting at Anthropic",
+  "location": "Lisbon, Portugal",
+  "experience": [
+    {
+      "company_urn": "urn:li:fsd_company:74669987",
+      "company_name": "Anthropic",
+      "title": "Research Consultant",
+      "start": "2025-09",
+      "end": null,
+      "is_current": true,
+      "employment_type": "contractor",
+      "location": "Remote"
+    },
+    {
+      "company_urn": "urn:li:fsd_company:1441",
+      "company_name": "Google",
+      "title": "Research Scientist",
+      "start": "2019-01",
+      "end": "2025-08",
+      "is_current": false,
+      "employment_type": "full_time",
+      "location": "London"
+    }
+  ],
+  "education": [],
+  "profile_last_updated": "2026-04-25T00:00:00+00:00",
+  "fetched_at": "2026-05-04T12:00:00+00:00",
+  "source": "fixture",
+  "parser_version": "1.0.0"
+}

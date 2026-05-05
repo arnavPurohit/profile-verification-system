@@ -1,0 +1,16 @@
+[
+  {
+    "urn": "urn:li:fsd_company:51164",
+    "name": "Coinbase",
+    "normalized": "coinbase",
+    "aliases": [],
+    "website": "https://coinbase.com",
+    "industry": "Financial Services",
+    "size_band": "1001-5000",
+    "hq": "Remote",
+    "parent_urn": null,
+    "fetched_at": "2026-05-04T12:00:00+00:00",
+    "source": "fixture",
+    "parser_version": "1.0.0"
+  }
+]

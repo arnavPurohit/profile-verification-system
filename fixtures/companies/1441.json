@@ -1,0 +1,14 @@
+{
+  "urn": "urn:li:fsd_company:1441",
+  "name": "Google",
+  "normalized": "google",
+  "aliases": ["Alphabet", "Google LLC"],
+  "website": "https://google.com",
+  "industry": "Internet",
+  "size_band": "10001+",
+  "hq": "Mountain View, CA",
+  "parent_urn": null,
+  "fetched_at": "2026-05-04T12:00:00+00:00",
+  "source": "fixture",
+  "parser_version": "1.0.0"
+}

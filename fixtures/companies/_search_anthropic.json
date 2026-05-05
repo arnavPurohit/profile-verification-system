@@ -1,0 +1,16 @@
+[
+  {
+    "urn": "urn:li:fsd_company:74669987",
+    "name": "Anthropic",
+    "normalized": "anthropic",
+    "aliases": [],
+    "website": "https://anthropic.com",
+    "industry": "Research Services",
+    "size_band": "501-1000",
+    "hq": "San Francisco, CA",
+    "parent_urn": null,
+    "fetched_at": "2026-05-04T12:00:00+00:00",
+    "source": "fixture",
+    "parser_version": "1.0.0"
+  }
+]

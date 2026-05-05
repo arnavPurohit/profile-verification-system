@@ -1,0 +1,13 @@
+### 08 — Ambiguous company name. Tara works at Apple Inc; the search returns
+### Apple Inc AND Apple Bank for Savings.
+### Without LLM (no API key): NoopDisambiguator picks the first candidate (Apple Inc).
+### With LLM: Claude picks based on context (industry, website).
+### Expected: verdict=yes for Apple Inc; method=fuzzy_llm if LLM enabled.
+
+POST http://localhost:8000/verify
+content-type: application/json
+
+{
+  "url": "https://www.linkedin.com/in/tara-apple",
+  "company": "Apple"
+}

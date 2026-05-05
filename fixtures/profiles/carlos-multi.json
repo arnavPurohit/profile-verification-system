@@ -1,0 +1,35 @@
+{
+  "urn": "urn:li:fsd_profile:carlos-multi-003",
+  "public_id": "carlos-multi",
+  "url": "https://www.linkedin.com/in/carlos-multi",
+  "name": "Carlos Mendes",
+  "headline": "Engineering Lead @ Stripe · Advisor @ Earlybird",
+  "location": "San Francisco, California, United States",
+  "experience": [
+    {
+      "company_urn": "urn:li:fsd_company:2135371",
+      "company_name": "Stripe",
+      "title": "Engineering Lead",
+      "start": "2021-01",
+      "end": null,
+      "is_current": true,
+      "employment_type": "full_time",
+      "location": "San Francisco, CA"
+    },
+    {
+      "company_urn": "urn:li:fsd_company:99999001",
+      "company_name": "Earlybird AI",
+      "title": "Advisor",
+      "start": "2024-06",
+      "end": null,
+      "is_current": true,
+      "employment_type": "advisor",
+      "location": "Remote"
+    }
+  ],
+  "education": [],
+  "profile_last_updated": "2026-04-30T00:00:00+00:00",
+  "fetched_at": "2026-05-04T12:00:00+00:00",
+  "source": "fixture",
+  "parser_version": "1.0.0"
+}

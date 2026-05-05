@@ -1,0 +1,12 @@
+[
+  {
+    "email": "alice@example.com",
+    "password": "change-me-1",
+    "daily_cap": 80
+  },
+  {
+    "email": "bob@example.com",
+    "password": "change-me-2",
+    "daily_cap": 80
+  }
+]

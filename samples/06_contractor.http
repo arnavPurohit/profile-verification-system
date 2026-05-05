@@ -1,0 +1,12 @@
+### 06 — Contractor. Leo is a research consultant at Anthropic, not full-time.
+### Verdict is yes (he is currently doing work for Anthropic) but the
+### non_full_time_role flag is surfaced in evidence so the customer can decide.
+### Expected: verdict=yes, evidence includes non_full_time_role: contractor.
+
+POST http://localhost:8000/verify
+content-type: application/json
+
+{
+  "url": "https://www.linkedin.com/in/leo-contractor",
+  "company": "Anthropic"
+}

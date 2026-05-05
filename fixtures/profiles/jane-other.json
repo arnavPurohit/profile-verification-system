@@ -1,0 +1,25 @@
+{
+  "urn": "urn:li:fsd_profile:jane-other-007",
+  "public_id": "jane-other",
+  "url": "https://www.linkedin.com/in/jane-other",
+  "name": "Jane Park",
+  "headline": "Backend Engineer at Coinbase",
+  "location": "Seoul, South Korea",
+  "experience": [
+    {
+      "company_urn": "urn:li:fsd_company:51164",
+      "company_name": "Coinbase",
+      "title": "Backend Engineer",
+      "start": "2023-02",
+      "end": null,
+      "is_current": true,
+      "employment_type": "full_time",
+      "location": "Seoul"
+    }
+  ],
+  "education": [],
+  "profile_last_updated": "2026-04-29T00:00:00+00:00",
+  "fetched_at": "2026-05-04T12:00:00+00:00",
+  "source": "fixture",
+  "parser_version": "1.0.0"
+}
