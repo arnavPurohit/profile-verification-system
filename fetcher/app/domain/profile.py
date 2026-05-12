@@ -34,5 +34,5 @@ class Profile(BaseModel):
     education: list[dict] = Field(default_factory=list)
     profile_last_updated: datetime | None = None
     fetched_at: datetime
-    source: Literal["voyager", "extension", "fixture", "login"] = "fixture"
+    source: Literal["voyager", "extension", "fixture", "login", "public"] = "fixture"
     parser_version: str = "1.0.0"

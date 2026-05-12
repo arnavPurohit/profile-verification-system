@@ -9,7 +9,7 @@ from fastapi import FastAPI
 
 from .config import Settings, load_settings
 from .domain import Account
-from .fetchers import FixtureFetcher, HeadlessFetcher, LinkedInFetcher, LoginFetcher, VoyagerFetcher
+from .fetchers import FallbackFetcher, FixtureFetcher, HeadlessFetcher, LinkedInFetcher, LoginFetcher, PublicFetcher, VoyagerFetcher
 from .middleware.rate_limit import RateLimitMiddleware
 from .observability import configure_logging
 from .pool.account_pool import AccountPool
@@ -90,6 +90,29 @@ def _build_fetcher(settings: Settings) -> LinkedInFetcher:
             profile_dir=settings.linkedin_playwright_profile_dir or None,
             channel=settings.linkedin_playwright_channel or None,
         )
+    if settings.fetcher_mode == "public":
+        public = PublicFetcher(
+            proxy=settings.public_proxy or None,
+            delay_min_ms=settings.public_delay_min_ms,
+            delay_max_ms=settings.public_delay_max_ms,
+        )
+        if settings.has_login_credentials:
+            log.info("public.login_fallback_enabled")
+            account = _build_account(settings)
+            account.email = settings.linkedin_email
+            login = LoginFetcher(
+                account=account,
+                email=settings.linkedin_email,
+                password=settings.linkedin_password,
+                state_path=settings.linkedin_state_path,
+                headless=False,
+                min_delay_ms=settings.linkedin_min_delay_ms,
+                max_delay_ms=settings.linkedin_max_delay_ms,
+                profile_dir=settings.linkedin_playwright_profile_dir or None,
+                channel=settings.linkedin_playwright_channel or None,
+            )
+            return FallbackFetcher(public, login)
+        return public
     raise ValueError(f"unknown FETCHER_MODE: {settings.fetcher_mode}")
 
 

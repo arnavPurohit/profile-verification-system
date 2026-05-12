@@ -16,7 +16,10 @@ class Settings(BaseSettings):
     redis_url: str = "redis://localhost:6379/0"
 
     fetcher_port: int = 8001
-    fetcher_mode: Literal["fixture", "voyager", "headless", "login"] = "fixture"
+    fetcher_mode: Literal["fixture", "voyager", "headless", "login", "public"] = "fixture"
+    public_proxy: str = ""                  # e.g. http://user:pass@host:port or socks5://...
+    public_delay_min_ms: int = 30_000       # minimum inter-request delay for public fetcher
+    public_delay_max_ms: int = 60_000       # maximum inter-request delay for public fetcher
     fixtures_dir: Path = Path("./fixtures")
 
     linkedin_email: str = ""
